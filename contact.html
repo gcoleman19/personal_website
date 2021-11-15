@@ -10,18 +10,20 @@
     <link rel="shortcut icon" type="image/png" href="images/Logo.png"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
-    <title>About Us</title>  
+    <title>Check Out Our Mixes!</title>
   </head>
-
-<header class='header'>
-  <div class = "skip"><a href="#skip">Skip to Main Content</a></div>
-<body>
+  <body>
+    <div class = "skip"><a href="granola.html">Skip to Main Content</a></div>
+  <header class='header'>
     <nav>
       <ul class="nav_links">
         <li class="nav_item"><a href="menu.html">Menu</a></li>
         <li class="nav_item"><a href="order.html">Order</a></li>
-        <a href='granola.html'><img src="images/Logo.png" width='175' height='175' alt="logo" id="logo"></a>
+        <li>
+          <div>
+          <a href='granola.html'><img src="images/Logo.png" width='175' height='175' alt="logo" id="logo"></a>
+          </div>
+        </li>
         <li class="nav_item"><a href="contact.html">Contact Us</a></li>
         <li class="nav_item"><a href="about.html">About Us</a></li>
       </ul>
@@ -29,26 +31,26 @@
   </header>
 <main class='container'>
 
-<p>Not Your Average Granola was born due to Emme's dietary restrictions. She always struggled to find gluten free granola.</p>
-<p>As sister we started making delicious, GF granola as a team. Our family and friends became addicted to our recipe and we thought this would be an amazing product to share with the world.</p>
-<p>This granola is a perfect for yogurt, ice cream, or just by the handful. Our granola can be enjoyed by all - gluten free or not.</p>
+  <div class="container">
+    <form action="nyagranola@gmail.com"
+    method="POST"
+    enctype="multipart/form-data"
+    name="EmailForm">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name.." required></input>
 
-<div>
-  <p>Meet the Sisters!</p>
-  </div>
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lname" placeholder="Your last name.." required></input>
 
-  <div>
-    <p>Emme is gluten free and loves to cook! She is the genius behind all of our mixes.</p>
-    </div>
-<div>
-  <img src="images/emme.jpeg" alt='Emme' id='Emme'
-  </div>
+    <label for="email">Email</label>
+    <input type="text" id="email" name="email" placeholder="Your email..." required></input>
 
-  <div>
-    <p>Grace is a business woman and coder, also the genius behind our website.</p>
-    </div>
-<div>
-  <img src="images/grace.jpeg" alt='Grace' id='Grace'>
+    <label for="subject">Message</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px" required></textarea>
+
+    <input type="submit" value="Submit">
+    </form> 
+
   </div>
 
 </main>
