@@ -34,10 +34,10 @@ body{
     padding: .3em .6em;
 }
 
-#insta{
-    justify-content: center;
-    width:80px;
-    height:80px;
+.insta{
+    text-align: center;
+    width:70px;
+    height:70px;
 }
 
 .container p{
@@ -69,6 +69,23 @@ a.skip{
     justify-content: center;
 }
 
+.email{
+    text-align: center;
+    color:rgb(44,85,70);
+    text-decoration: none;
+}
+
+.email:visited{
+    text-align: center;
+    color:rgb(44,85,70);
+    text-decoration: none;
+}
+
+.email:hover{
+    text-align: center;
+    color:rgb(228,71,89);
+    text-decoration: none;
+}
 
 .nav_links{
     color:rgb(255,255,255);
@@ -78,21 +95,24 @@ a.skip{
     align-items: center;
     font-size: 1em;
     text-align: center;
+    text-decoration: none;
 }
 
 .nav_links:visited{
     color:rgb(44,85,70);
+    text-decoration: none;
 }
 
 .nav_item a{
     color:rgb(44,85,70);
     padding: 20px;
+    text-decoration: none;
 }
   
   .nav_item a:hover, a:focus{
     color: rgb(228,71,89);
-    text-decoration: underline;
     font-family: 'Spartan', sans-serif;
+    text-decoration: none;
   }
 
 .mason{
@@ -144,9 +164,9 @@ h2{
 .gallery{
     display:grid;
     justify-content: center;
-    grid-template-columns: 100px 100px 100px;
-    grid-template-rows: 100px 100px 100px;
-    grid-gap: 50px;
+    grid-template-columns: 3em 3em 3em;
+    grid-template-rows: 3em 3em 3em;
+    grid-gap: 20px;
 }
 
 
@@ -167,19 +187,6 @@ input[type=submit]:hover {
     color:rgb(255,255,255);
 }
 
-.email{
-    text-align: center;
-    color:rgb(44,85,70);
-    text-decoration-style: solid;
-}
-
-.email:visited{
-    color:rgb(44,85,70)
-}
-
-.email:hover{
-    color:rgb(228,71,89);
-}
 
 *, *:after, *:before {
     box-sizing: border-box;
@@ -275,18 +282,20 @@ h2 img{
 
     .nav_links:visited{
         color:rgb(44,85,70);
+        text-decoration: none;
     }
     
     .nav_item a{
         color:rgb(44,85,70);
         padding: 10px;
+        text-decoration: none;
     
       }
       
       .nav_item a:hover, a:focus{
         color: rgb(228,71,89);
-        text-decoration: underline;
         font-family: 'Spartan', sans-serif;
+        text-decoration: none;
       }
       #logo{
         width: 9em;
@@ -297,6 +306,15 @@ h2 img{
     
     .nav_links{
         flex-direction: row;
+        text-decoration: none;
+    }
+
+    .gallery{
+        display:grid;
+        justify-content: center;
+        grid-template-columns: 7em 7em 7em;
+        grid-template-rows: 7em 7em 7em;
+        grid-gap: 50px;
     }
 } 
 
@@ -311,6 +329,15 @@ h2 img{
         flex-direction: row;
         font-size: 1.5em;
         justify-content:space-between;
-        padding:10px;
+        padding:15x;
+        text-decoration: none;
+    }
+
+    .gallery{
+        display:grid;
+        justify-content: center;
+        grid-template-columns: 7em 7em 7em;
+        grid-template-rows: 7em 7em 7em;
+        grid-gap: 50px;
     }
   }
