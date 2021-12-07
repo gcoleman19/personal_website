@@ -8,40 +8,55 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alegreya&family=Spartan:wght@100&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="images/Logo.png"/>
+    <script type='text/javascript' src="flip-card.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
-    <title>About Us</title>  
+    <title>About Us</title> 
   </head>
 <body>
-<div class = "skip"><a href="granola.html">Skip to Main Content</a></div>
   <header class='header'>
-    <a href='granola.html'><img src="images/Logo.png" width='175' height='175' alt="logo" id="logo"></a>
+    <a class="skip-to-content-link" href=#container>Skip to Main Content</a>
+    <a class='current' href='granola.html'><img src="images/Logo.png" width='175' height='175' alt="logo" id="logo"></a>
     <nav>
       <ul class="nav_links">
-        <li class="nav_item"><a href="menu.html">Menu</a></li>
-        <li class="nav_item"><a href="order.html">Order</a></li>
-        <li class="nav_item"><a href="contact.html">Contact Us</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="order.html">Order</a></li>
+        <li><a href="granola.html">Home</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
         <li class="nav_item"><a href="about.html">About Us</a></li>
       </ul>
   </nav>
   </header>
-<main class='container'>
+<main id='container'>
 <h1>About Us</h1>
 <p>Not Your Average Granola was born due to Emme's dietary restrictions. She always struggled to find gluten free granola.</p>
-<p>As sister we started making delicious, GF granola as a team. Our family and friends became addicted to our recipe and we thought this would be an amazing product to share with the world.</p>
+<p>As sisters we started making delicious GF granola as a team. Our family and friends became addicted to our recipe and we thought this would be an amazing product to share with the world.</p>
 <p>This granola is a perfect for yogurt, ice cream, or just by the handful. Our granola can be enjoyed by all - gluten free or not.</p>
+<p>Meet the Sisters!</p>
 
-<div>
-  <p>Meet the Sisters!</p>
-</div>
+<div class='flip'>
+<div class="card-container">
+    <div class="card-horizontal">
+        <div class="card-front"> 
+            <img class='card-fron-content' src="images/emme.jpeg" alt='Emme' id='Emme'>
+        </div>
+        <div class="card-back card-back-hr">
+          <p>Emme is gluten free and loves to cook. She is the genius behind all of our mixes!</p>
+        </div>
+    </div>
 
-<div>
-  <p>Emme is gluten free and loves to cook! She is the genius behind all of our mixes.</p>
-  <img src="images/emme.jpeg" alt='Emme' id='Emme'>
-  <p>Grace is a business woman and coder, also the genius behind our website.</p>
+<div class="card-container">
+  <div class="card-horizontal">
+      <div class="card-front"> 
+          <img class='card-fron-content' src="images/grace.jpeg" alt='Grace' id='Grace'>
+      </div>
+      <div class="card-back card-back-hr">
+        <p>Grace runs the business side of of NYAG. She loves running our social media and website.</p>
+      </div>
+  </div>
 </div>
-  <img src="images/grace.jpeg" alt='Grace' id='Grace'>
+</div>
+</div>
 
 </main>
 

@@ -6,19 +6,73 @@ body{
 
 .header{
     background-color:rgb(255,255,255);
-    color:#f1f1f1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: sticky;
-    height: 300px;
+    height: auto;
     line-height: 30px;
     border-bottom:4px solid rgb(244,181,205);
 }
 
-.container{
-    display:grid;
+.email{
+    text-align: center;
+    color:rgba(0, 0, 0, .8);
+    text-decoration: underline;
+}
+
+.email:visited{
+    text-align: center;
+    color:rgba(0, 0, 0, .8);
+    text-decoration: none;
+}
+
+.email:hover{
+    text-align: center;
+    color:rgb(228,71,89);
+    text-decoration: none;
+}
+
+.nav_links .nav_item{
+    text-decoration: underline;
+}
+
+h3{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.jar{
+  background-image: url('ima');
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header .current{
+width:143px;
+height: 143px;
+border-radius: 150px;
+-webkit-border-radius: 200px;
+-moz-border-radius: 150px;
+background: url(URL) no-repeat;
+box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+}
+
+p{
+    display: block;
+    margin-top: 0px;
+    line-height: 30px;
+}
+
+#container{
+    display:block;
     padding:5px;
     align-items: center;
     justify-content: center;
@@ -27,6 +81,7 @@ body{
     background-color: rgb(255,255,255);
     padding: 20px;
     width: 80%;
+    /* height: auto; */
     margin: 1em auto;
     padding: .3em .6em;
     margin: 1em auto;
@@ -40,28 +95,12 @@ body{
     height:70px;
 }
 
-.container p{
+#container p{
+    display: block;
     text-align: center;
     font-size: 1em;
     color:#000000;
 }
-
-a.skip{
-    background: white;
-    left: 0;
-    padding: 6px;
-    position: absolute;
-    top: -40px;
-    -webkit-transition: top 1s ease-out;
-    transition: top 1s ease-out;
-    z-index: 1;
-  }
-  
-  a.skip:focus{
-    top:20px;
-    color: black;
-    text-decoration-style: solid;
-  }
 
 #logo{
     width: 9em;
@@ -69,23 +108,6 @@ a.skip{
     justify-content: center;
 }
 
-.email{
-    text-align: center;
-    color:rgb(44,85,70);
-    text-decoration: none;
-}
-
-.email:visited{
-    text-align: center;
-    color:rgb(44,85,70);
-    text-decoration: none;
-}
-
-.email:hover{
-    text-align: center;
-    color:rgb(228,71,89);
-    text-decoration: none;
-}
 
 .nav_links{
     color:rgb(255,255,255);
@@ -103,13 +125,13 @@ a.skip{
     text-decoration: none;
 }
 
-.nav_item a{
+.nav_links a{
     color:rgb(44,85,70);
     padding: 20px;
     text-decoration: none;
 }
   
-  .nav_item a:hover, a:focus{
+  .nav_links a:hover, a:focus{
     color: rgb(228,71,89);
     font-family: 'Spartan', sans-serif;
     text-decoration: none;
@@ -123,12 +145,84 @@ a.skip{
     justify-content: center;
 }
 
-.card{
-    justify-content: center;
+#container img{
+    align-items: center;
 }
 
-.container img{
-    align-items: center;
+.flip{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow:hidden;
+}
+
+.card-container{
+    color:rgb(255,255,255);
+    -webkit-perspective:1200;
+    -moz-perspective:1200;
+    perspective:1200;
+}
+
+.card-vertical, .card-horizontal{
+    width:400px;
+    height:400px;
+    color:rgb(255,255,255);
+    box-shadow: 0 6px 8px #bbb;
+    -moz-transform-style:preserve-3d;
+    -webkit-transform-style:preserve-3d;
+    transform-style:preserve-3d;
+    transition:all .4s ease;
+}
+
+.card-front, .card-back{
+    height:400px;
+    width:400px;
+    color:rgb(255,255,255);
+    position:absolute;
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform-style:preserve-3d;
+    -moz-transform-style:preserve-3d;
+    transform-style:preserve-3d;
+}
+
+.card-back{
+    color:rgb(255,255,255);
+    -moz-transform:rotateY(179.9deg);
+    -webkit-transform:rotateY(179.9deg);
+    transform:rotateY(179.9deg);
+    background:rgb(228,71,89);
+}
+
+.card-front-content, .card-back-content{
+    color:rgb(255,255,255);
+    padding:2em;
+    box-sizing:border-box;
+    text-align:center;
+    line-height: 90px;
+    text-align: center;
+    vertical-align: middle;
+    line-height:40px;
+}
+  
+.card-back-hr{
+    color:rgb(255,255,255);
+    -webkit-transform:rotateX(179.9deg);
+    -moz-transform:rotateX(179.9deg);
+    transform:rotateX(179.9deg);
+}
+  .card-vertical:hover{
+    color:rgb(255,255,255);
+    -webkit-transform:rotateY(179.9deg);
+    -moz-transform:rotateY(179.9deg);
+    transform:rotateY(179.9deg);
+  }
+.card-horizontal:hover{
+    color:rgb(255,255,255);
+    -webkit-transform:rotateX(179.9deg);
+    -moz-transform:rotateX(179.9deg);
+    transform:rotateX(179.9deg);
 }
 
 .footer{
@@ -158,33 +252,29 @@ h1 {
 
 h2{
     justify-content: center;
+    text-align: center;
     font-size: 1.2em;
+    margin-bottom: 10px;
+    margin-top: 60px;
 }
+
+span{
+    display:flex;
+    justify-content: center;
+    flex-direction: row;
+    
+}
+
 
 .gallery{
     display:grid;
+    overflow:auto;
+    max-width: 100%;
+    max-height: 100%;
     justify-content: center;
-    grid-template-columns: 3em 3em 3em;
-    grid-template-rows: 3em 3em 3em;
+    grid-template-columns: 3em;
+    grid-template-rows: 3em;
     grid-gap: 20px;
-}
-
-
-input[type=text], select, textarea {
-    width: 100%; /* Full width */
-    padding: 12px; /* Some padding */ 
-    border: 1px solid #000000; /* Black border */
-    border-radius: 4px; /* Rounded borders */
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-  }
-  
-  /* When moving the mouse over the submit button, add a darker green color */
-input[type=submit]:hover {
-    background-color: rgb(228,71,89);
-    color:rgb(255,255,255);
 }
 
 
@@ -199,15 +289,8 @@ h2{
     justify-content: center;
 }
 
-h2 img{
-    display:flex;
-    flex-direction:column;
-    align-items: flex-end;
-    width:200px;
-    height:200px;
-}
-
-.container p{
+#container p{
+    display:block;
     font-size: 1em;
     color: #000000;
     margin: 1em;
@@ -222,6 +305,7 @@ h2 img{
     align-items: center;
     font-size: 1em;
     text-align: center;
+    text-decoration: none;
 }
 
 .orderNow:visited{
@@ -232,19 +316,20 @@ h2 img{
     color:rgb(228,71,89);
 }
 
-.skip{
-    color: rgb(44,85,70);
+.skip-to-content-link {
+    color:rgb(44,85,70);
+    background: white;
     left: 0;
     padding: 6px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
     position: absolute;
     top: -40px;
-    z-index: 1;
   }
-
-.skip:focus{
-    top:20px;
-    color: rgb(44,85,70);
-    text-decoration-style: solid;
+  
+.skip-to-content-link:focus {
+    top: 0;
   }
 
 
@@ -254,7 +339,6 @@ h2 img{
 }
 
 .order{
-
     height: 100%;
     width: 95%;
     margin: auto;
@@ -262,21 +346,43 @@ h2 img{
     margin-top: 15px;
 }
 
-.card{
-    text-align: center;
-}
+.current{
+    width:175;
+    height:175;
+    animation-iteration-count: 1;
+    -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    -o-transition-duration: 0.8s;
+    transition-duration: 0.8s;   
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;    
+    overflow:hidden;
+}  
 
+ .current  
+{
+    -moz-animation: spin .8s linear;
+    -o-animation: spin .8s linear;    
+    -webkit-animation: spin .8s linear;
+    animation: spin .8s linear;        
+} 
+
+@keyframes spin{
+    0% { transform: rotateY(0deg); }
+    100% { transform: rotateY(360deg); }
+}
 
 @media screen and (min-width: 600px){
     .header{
         background-color:rgb(255,255,255);
-        color:#f1f1f1;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         position: sticky;
-        height: 200px;
+        height: auto;
         border-bottom:4px solid rgb(244,181,205);
     }
 
@@ -285,14 +391,14 @@ h2 img{
         text-decoration: none;
     }
     
-    .nav_item a{
+    .nav_links a{
         color:rgb(44,85,70);
         padding: 10px;
         text-decoration: none;
     
       }
       
-      .nav_item a:hover, a:focus{
+      .nav_links a:hover, a:focus{
         color: rgb(228,71,89);
         font-family: 'Spartan', sans-serif;
         text-decoration: none;
@@ -303,7 +409,6 @@ h2 img{
         justify-content: center;
     }
     
-    
     .nav_links{
         flex-direction: row;
         text-decoration: none;
@@ -311,12 +416,12 @@ h2 img{
 
     .gallery{
         display:grid;
+        overflow:auto;
         justify-content: center;
-        grid-template-columns: 7em 7em 7em;
-        grid-template-rows: 7em 7em 7em;
-        grid-gap: 50px;
+        grid-template-columns: 3em 3em;
+        grid-template-rows: 3em 3em 3em;
+        grid-gap: 30px;
     }
-} 
 
 @media screen and (min-width: 850px){
     .header{
@@ -335,9 +440,38 @@ h2 img{
 
     .gallery{
         display:grid;
+        overflow:auto;
         justify-content: center;
         grid-template-columns: 7em 7em 7em;
         grid-template-rows: 7em 7em 7em;
         grid-gap: 50px;
     }
-  }
+
+
+    @media screen and (prefers-reduced-motion: reduce){
+        .skip-to-content-link a{
+            -webkit-transition: initial;
+            transition: initial;
+          }
+
+          @-webkit-keyframes vertical-animate {}
+          @keyframes vertical-animate {}
+          @-webkit-keyframes horizontal-animate {}
+          @keyframes horizontal-animate {}
+      
+          * {
+              -webkit-animation: none !important;
+              -moz-animation: none !important;
+              -o-animation:  none !important;
+              animation: none !important;
+          }
+
+        header{
+          background-attachment: initial;
+        }
+
+        .current{
+        -webkit-transition: initial;
+        transition: initial;
+        }
+      }
